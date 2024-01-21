@@ -1,6 +1,6 @@
-local display = peripheral.find("monitor")
-local display_x, display_y = display.getSize()
---display.setTextScale(1)
+display = peripheral.find("monitor")
+display_x, display_y = display.getSize()
+
 
 function guiClear()
     display.setBackgroundColor(colors.black)
