@@ -8,12 +8,28 @@ guiClear()
 while true do
     guiProgressBar(
         2,
-        5,
+        6,
         "Storage",
         display_x-2,
         3,
         ME_BRIDGE.getUsedItemStorage(),
         ME_BRIDGE.getTotalItemStorage(),
+        colors.green,
+        colors.orange,
+        colors.red,
+        colors.gray
+    )
+
+    guiProgressBar(
+        2,
+        2,
+        "AE Energy",
+        display_x-2,
+        3,
+        ME_BRIDGE.getUsedItemStorage(),
+        ME_BRIDGE.getTotalItemStorage(),
+        colors.red,
+        colors.orange,
         colors.green,
         colors.gray
     )

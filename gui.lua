@@ -29,7 +29,7 @@ function guiDrawLine(x, y, length, size, color_bar)
 end
 
 
-function guiProgressBar(x, y, name, length, size, min_value, max_value, color_bar, color_bg)
+function guiProgressBar(x, y, name, length, size, min_value, max_value, color_bar_default, color_bar_warning, color_bar_danger, color_bg)
     local bar_size = math.floor((min_value/max_value)*length)
     local percent_progress = math.floor((min_value/max_value)*100)
 
@@ -38,10 +38,12 @@ function guiProgressBar(x, y, name, length, size, min_value, max_value, color_ba
     else
         local text = ("%s %d%%"):format(name, percent_progress)
 
+        color_bar = color_bar_default
+
         if percent_progress >= 95 then
-            color_bar = colors.red
+            color_bar = color_bar_danger
         elseif percent_progress >= 80 then
-            color_bar = colors.orange
+            color_bar = color_bar_warning
         end
 
         guiDrawLine(x, y, length, size, color_bg)
