@@ -8,7 +8,7 @@ guiClear()
 while true do
     guiProgressBar(
         2,
-        6,
+        8,
         "Storage",
         display_x-2,
         3,
@@ -22,7 +22,7 @@ while true do
 
     guiProgressBar(
         2,
-        2,
+        3,
         "AE Energy",
         display_x-2,
         3,
