@@ -40,3 +40,13 @@ end
 function is_nan(arg)
     return arg ~= arg
 end
+
+-- list
+function is_contains(list, x)
+	for _, v in ipairs(list) do
+		if v == x then 
+            return true 
+        end
+	end
+	return false
+end
