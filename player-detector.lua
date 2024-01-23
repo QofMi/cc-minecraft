@@ -28,7 +28,9 @@ while true do
     y_pos = 1
     
     if PLAYER_DETECTOR then
-        for _, player in pairs(PLAYER_DETECTOR.getOnlinePlayers()) do
+        for _, _player in pairs(PLAYER_DETECTOR.getOnlinePlayers()) do
+            player = _player
+            
             if PLAYER_DETECTOR.isPlayerInRange(RANGE_DETECTION, player) then
 
                 if USE_WHITE_LIST then
