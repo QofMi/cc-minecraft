@@ -1,0 +1,16 @@
+{
+    clock = {
+        name = "Clock",
+        desc = "Clock",
+        path = "qofmi",
+        version = "1.0.0",
+        startup = "shell.run('qofmi/clock.lua')",
+        files = {
+            {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/clock.lua", name = "clock.lua", type = "program"}
+        },
+        needs = {
+            monitor = true,
+            modem = false,
+        }
+    }
+}
