@@ -11,14 +11,14 @@
     },
     ae_bridge = {
         name = "ae_bridge",
-        desc = "Clock",
+        desc = "Displays AE storage information",
         path = "ae_bridge",
         version = "1.0.0",
         startup = "shell.run('ae_bridge/ae_bridge.lua')",
         files = {
-            {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/clock.lua", name = "ae_bridge.lua", type = "program"},
+            {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/ae_bridge.lua", name = "ae_bridge.lua", type = "program"},
             {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/api/gui.lua", name = "gui.lua", type = "api"},
-            {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/isa.lua", name = "isa.lua", type = "api"},
+            {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/api/isa.lua", name = "isa.lua", type = "api"},
         }
     }
 }
