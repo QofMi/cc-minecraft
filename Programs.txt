@@ -20,17 +20,5 @@
             {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/api/gui.lua", name = "gui.lua", type = "api"},
             {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/api/isa.lua", name = "isa.lua", type = "api"},
         }
-    },
-    player_detector = {
-        name = "player_detector",
-        desc = "Tracks players",
-        path = "player_detector",
-        version = "1.0.0",
-        startup = "shell.run('player_detector/player-detector.lua')",
-        files = {
-            {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/player-detector.lua", name = "player-detector.lua", type = "program"},
-            {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/api/gui.lua", name = "gui.lua", type = "api"},
-            {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/api/isa.lua", name = "isa.lua", type = "api"},
-        }
     }
 }
