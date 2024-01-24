@@ -26,6 +26,31 @@ function loadSources()
 end
 
 
+function delete(program)
+    if programs[program] == nil then
+        error("Program '" .. program .. "' does not exists!")
+    end
+    
+    if fs.exists("startup") then
+        fs.delete("startup")
+    end
+
+    for k, v in ipairs(programs[program]["files"]) do
+        if fs.exists(program .."/".. v.name) then
+            
+            term.setTextColor(colors.yellow)
+            print("Deleting ".. v.name)
+
+            dir = fs.getDir(program .."/".. v.name)
+            fs.delete(program .."/".. v.name)
+        end
+    end
+    fs.delete(program)
+    term.setTextColor(colors.lime)
+    print("Successfully deleted ".. program)
+end
+
+
 function install(program)
     if programs[program] == nil then
         error("Program '" .. program .. "' does not exists!")
@@ -89,8 +114,8 @@ function showHelp()
     print("installer help              - Shows this menu")
     print("installer list              - Lists all available programs")
     print("installer install <program> - Installs a program")
-    -- print("installer update <program>  - Updates a program")
-    -- print("installer delete <program>  - Deletes a program")
+    print("installer update <program>  - Updates a program")
+    print("installer delete <program>  - Deletes a program")
     -- print("installer config <program>  - Configures a program after it is installed")
     term.setTextColor(colors.lightGray)
     print("---- [=========] ----")
@@ -108,10 +133,11 @@ function executeInput()
         showList()
     elseif #args >= 1 and args[1] == "install" then
         install(args[2])
-    -- elseif #args >= 1 and args[1] == "update" then
-    --     exit("Not implemented", false)
-    -- elseif #args >= 1 and args[1] == "delete" then
-    --     exit("Not implemented", false)
+    elseif #args >= 1 and args[1] == "update" then
+        delete(args[2])
+        install(args[2])
+    elseif #args >= 1 and args[1] == "delete" then
+        delete(args[2])
     -- elseif #args >= 1 and args[1] == "config" then
     --     exit("Not implemented", false)
     elseif #args >= 1 then
