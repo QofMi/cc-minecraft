@@ -21,7 +21,7 @@
             {link="https://raw.githubusercontent.com/QofMi/cc-minecraft/main/api/isa.lua", name = "isa.lua", type = "api"},
         }
     },
-    player-detector = {
+    player_detector = {
         name = "player-detector",
         desc = "Tracks players",
         path = "player-detector",
